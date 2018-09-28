@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #ffff;
+    background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -55,9 +55,8 @@
     .menu-branding .portrait {
       width: 200px;
       height: 250px;
-      background: url("../img/skpotrait2.JPG");
+      background: url("../img/skpotrait2.jpg");
       border-radius: 50%;
-      background-repeat: no-repeat;
       border: solid 3px #63f237; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
@@ -67,17 +66,17 @@
     .menu .nav-item.current > a {
       color: #63f237; }
   .menu .nav-link {
-    display: block;
+    display: inline-block;
     position: relative;
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 400;
-    color: #ffff;
+    font-weight: 350;
+    color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #63f237; }
+      color: #db1aaa; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -96,37 +95,43 @@
 
 body {
   background: #444;
-  color: #ffff;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/back2.jpeg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
-  body:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: rgba(68, 68, 68, 0.93); }
+    body#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.9); }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 6rem; }
-  h1.sm-header, h2.sm-header, h3.sm-header {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
 
 a {
-  color: white;
+  color: #fff;
   text-decoration: none; }
 
 header {
@@ -143,25 +148,19 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem;
-      background-color: none; }
+      padding: 0.4rem; }
       main .icons a:hover {
-        color: purple;
+        color: #db1aaa;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
-  main#portifolio {
-    overflow: hidden; }
-    main#portifolio h1 {
-      margin-top: 20vh; }
 
 .about-info {
   display: grid;
-  padding: 0;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: 'bioimage bio bio' 'job2 job3 job1';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -170,12 +169,12 @@ main {
     border: #63f237 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1rem; }
+    font-size: 11pt; }
   .about-info .job-1 {
     grid-area: job1; }
-  .about-info .job-1 {
+  .about-info .job-2 {
     grid-area: job2; }
-  .about-info .job-1 {
+  .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
     background: #515151;
@@ -216,18 +215,19 @@ main {
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
-  border-radius: 2px;
   border: 0;
-  margin: 0; }
+  margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #63f237;
     color: #000; }
 
 .btn-dark {
-  background-color: #e91e63;
+  background: #db1aaa;
+  border-radius: 1px;
   color: #fff; }
 
 .btn-light {
+  border-radius: 1px;
   background: #c4c4c4;
   color: #333; }
 
@@ -235,7 +235,7 @@ main {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
-  color: #ffff;
+  color: #fff;
   height: 60px; }
 
 .fa-node {
@@ -250,7 +250,7 @@ main {
   margin: 1rem; }
 
 .fa-github {
-  color: #f05033; }
+  color: black; }
 
 .fa-linux {
   color: black;
@@ -365,9 +365,10 @@ main {
   border-radius: 3px;
   text-align: center;
   text-transform: uppercase; }
-  .projects .projects_title:hover {
-    background: peru;
-    color: #000; }
+
+.projects .projects_title:hover {
+  background: peru;
+  color: #000; }
 
 #tools {
   color: black;
@@ -406,9 +407,10 @@ main {
   border-radius: 2px;
   border: 0;
   margin-bottom: 0.1rem; }
-  .btnback:hover {
-    background: #db1aaa;
-    color: #000; }
+
+.btnback:hover {
+  background: #db1aaa;
+  color: #000; }
 
 .btnview {
   background-color: black;
@@ -419,9 +421,10 @@ main {
   border-radius: 2px;
   border: 0;
   margin-bottom: 0.1rem; }
-  .btnview:hover {
-    background: #c45109;
-    color: #000; }
+
+.btnview:hover {
+  background: #c45109;
+  color: #000; }
 
 .important-text {
   color: #63f237 !important; }
@@ -439,10 +442,11 @@ main {
   border: 0;
   margin-bottom: 0.1rem;
   float: right; }
-  .atags .btnnext:hover {
-    background: #c45109;
-    color: #000;
-    text-decoration: none; }
+
+.atags .btnnext:hover {
+  background: #c45109;
+  color: #000;
+  text-decoration: none; }
 
 .btnsubmit {
   margin-top: 15px;
@@ -459,16 +463,19 @@ main {
 .bio .btnnext {
   background-color: #e2160b;
   width: 200px;
+  font-size: 11.5pt;
   text-align: center;
   display: block;
   padding: 0.5rem 1rem;
+  font-weight: normal;
   border-radius: 4px;
   border: 0;
   margin-bottom: 0.1rem;
   float: right; }
-  .bio .btnnext:hover {
-    background: #c45109;
-    color: #000; }
+
+.bio .btnnext:hover {
+  background: #c45109;
+  color: #000; }
 
 .gallery .carousel-inner img {
   width: 100%;
@@ -490,10 +497,11 @@ main {
   float: right;
   font-weight: normal;
   font-size: 11pt; }
-  .btncontact:hover {
-    background: black;
-    color: white;
-    text-decoration: none; }
+
+.btncontact:hover {
+  background: black;
+  color: white;
+  text-decoration: none; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -514,8 +522,8 @@ main {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
+  ul.menu-nav.show, div.menu-branding.show {
+    transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
@@ -523,13 +531,10 @@ main {
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/logo.png");
-      width: 189px;
-      height: 244px; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; }
+  .menu-branding .portrait {
+    background: url("../img/logo.png");
+    width: 189px;
+    height: 244px; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
   .iframe {
@@ -546,3 +551,69 @@ main {
     margin: 0 0 0 0 !important;
     width: 450px;
     height: 450px; } }
+
+.btngit {
+  background-color: #db1aaa;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 0;
+  margin-bottom: 0.1rem;
+  float: right;
+  font-weight: normal;
+  font-size: 11pt; }
+  .btngit:hover {
+    background: black;
+    color: white;
+    text-decoration: none; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/logo.png");
+      width: 189px;
+      height: 244px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }

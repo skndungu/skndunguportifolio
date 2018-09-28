@@ -6,12 +6,21 @@
   "homepage": "https://skndungu.github.io/skndunguportifolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "build": "node build/build.js"
   },
   "author": "skndungu",
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^2.0.0",
     "node-sass": "^4.9.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skndungu/skndunguportifolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skndungu/skndunguportifolio/issues"
   }
 }
