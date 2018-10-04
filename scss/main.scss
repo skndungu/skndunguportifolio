@@ -15,6 +15,18 @@ body {
   line-height: 1.5;
 }
 
+.typestyle {
+font-size: 36pt;
+color: #1aabdb;
+// Cursor 
+  #cursor {
+    border-right: 0.2rem solid #63f237 ;
+    text-decoration: none;
+    font-size: 36pt;
+   }
+}
+
+
 // Headings
 h1,
 h2,
@@ -60,7 +72,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: #db1aaa;
+        color: $secondary-color;
         @include easeOut();
       }
     }
