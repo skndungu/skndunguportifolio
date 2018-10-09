@@ -303,11 +303,6 @@ main {
   font-size: 4em;
   margin: 1rem; }
 
-.arduino {
-  height: 82px;
-  font-size: 4em;
-  margin: 1rem; }
-
 .raspberry {
   height: 82px;
   width: 82px;
@@ -577,6 +572,22 @@ main {
     color: white;
     text-decoration: none; }
 
+.fight {
+  color: #63f237;
+  font-style: italic;
+  font-size: 14pt;
+  font-weight: 450px; }
+
+.skysaver {
+  display: flex;
+  justify-content: center; }
+
+.tools-color-alarm {
+  color: black; }
+
+.dev-section {
+  color: #57b7f1; }
+
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
@@ -610,7 +621,7 @@ main {
       width: 189px;
       height: 244px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job2' 'job1' 'job3';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -624,4 +635,7 @@ main {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .txt-type {
+    width: 100%;
+    flex-wrap: wrap; } }

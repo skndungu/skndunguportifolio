@@ -56,8 +56,8 @@
     grid-template-areas:
       'bioimage'
       'bio'
-      'job1'
       'job2'
+      'job1'
       'job3';
 
     grid-template-columns: 1fr;
@@ -85,4 +85,13 @@
   .projects {
     grid-template-columns: 1fr;
   }
+
+  .txt-type{
+  width: 100%;
+  flex-wrap: wrap;
+  // align-items: center;
+    // display: flex;
+    // flex-direction: column;
+  }
+
 }

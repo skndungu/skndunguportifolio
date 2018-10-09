@@ -272,11 +272,6 @@ main {
   margin: 1rem; 
 }
 
-.arduino {
-  height: 82px;
-  font-size: 4em;
-  margin: 1rem; }
-
 .raspberry {
   height: 82px;
   width: 82px;
@@ -606,4 +601,24 @@ main {
       text-decoration: none;
     }
   }
+
+  .fight {
+    color: #63f237;
+    font-style: italic;
+    font-size: 14pt;
+    font-weight: 450px;
+  }
+  .skysaver {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tools-color-alarm {
+    color:black;
+  }
+
+  
+  .dev-section {
+    color: #57b7f1;
+    }
 @import 'mobile';
