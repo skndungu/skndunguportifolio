@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7dbnOKtDqJMUZ7BV-j7gDxBoWBIaOINZqnnNTnaJANRMKwxfM">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome To My Portifolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="bg-img">
+<header>
+  <div class="menu-btn">
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+    <div class="btn-line"></div>
+  </div>
+
+  <nav class="menu">
+    <div class="menu-branding">
+      <div class="portrait"></div>
+    </div>
+    <ul class="menu-nav">
+      <li class="nav-item current">
+        <a href="index.html" class="nav-link ">
+        Home 
+      </a>
+      </li>
+      <li class="nav-item">
+          <a href="about.html" class="nav-link">
+         About me
+        </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="mydevportifolio.html" class="nav-link">
+          My Dev Portifolio
+        </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="work.html" class="nav-link">
+            My work 
+          </a>
+          </li>
+
+          <li class="nav-item">
+              <a href="contact.html" class="nav-link">
+              Contacts
+            </a>
+            </li>
+          </ul>
+        </nav>
+    </header> 
+
+    <main id="home">
+      <h1 class="lg-heading">
+        Simon <span class="text-secondary">Ndungu</span>
+        <br>
+      </h1>
+       <div class="typestyle">
+        <span style="color: white;">The </span> 
+      
+      <span id="cursor" class="txt-type" data-wait="1500" data-words='["Mechatronic Engineer ","Web_Developer", "PCB_Designer","Mobile App Developer","Green Energy Researcher","Product_Designer", "Android & ios Apps Developer","IoT_Engineer", "Circuit Designer", "Hardware Programmer", "Entrepreneur"]'> </span>
+    </div>
+      <h2 class="sm-heading" style="color: black; font-weight: 500;">
+        Mechatronic Engineer, Web/Mobile Developer, Hardware Programmer,
+          <br>Software Developer, PCB Designer and Entrepreneur
+      </h2>
+      <div class="icons">
+        <a href="https://twitter.com/skndungu1" target="_blank">
+          <i style="cursor: pointer;" class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCU55Qk4kQyf2NcbtplJvKGw?view_as=subscriber" target="_blank">
+            <i class="fab fa-youtube fa-2x"></i>
+         </a>
+        <a href="https://github.com/skndungu" target="_blank">
+              <i class="fab fa-github fa-2x"></i>
+         </a>
+        <a href="https://www.linkedin.com/in/simon-ndung-u-06095296/" target="_blank"> 
+           <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://skndungu.slack.com/" target="_blank"> <i class="fab fa-slack-hash fa-2x"></i></a>
+      </div>
+    </main>
+    
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBPGGIw_QDgOK6HHvAhdCztG6qMZbpismw",
+    authDomain: "skndunguportifolio-739e9.firebaseapp.com",
+    databaseURL: "https://skndunguportifolio-739e9.firebaseio.com",
+    projectId: "skndunguportifolio-739e9",
+    storageBucket: "skndunguportifolio-739e9.appspot.com",
+    messagingSenderId: "627024149070"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="js/type.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
