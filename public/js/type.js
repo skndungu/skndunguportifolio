@@ -65,5 +65,15 @@ const TypeWriter = function(txtElement, words, wait = 1500) {
     //Init TypeWriter
     new TypeWriter(txtElement, words, wait);
   }
-  
+
+  $(document).ready(function() {
+    var welcome = $(".welcome");
+    welcome.slideUp(2000);
+    welcome.slideDown(2000); 
+    welcome.animate({left:'500px'}, "slow");
+    welcome.css({color:" green"});
+    welcome.animate({fontSize: '2rem'}, "slow");
+    welcome.animate({left: '0'});
+    welcome.slideUp(2000);
+  });
   

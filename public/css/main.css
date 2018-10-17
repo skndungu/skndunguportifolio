@@ -53,11 +53,11 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 200px;
+      width: 225px;
       height: 250px;
-      background: url("../img/skpotrait2.JPG");
+      background: url("../img/dev3.jpg");
       border-radius: 50%;
-      border: solid 3px #63f237; }
+      border: solid 3px rgb(13, 233, 215); }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -101,18 +101,24 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/back.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
     body#bg-img:after {
       content: '';
       position: absolute;
       top: 0;
       right: 0;
+      bottom:0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(68, 68, 68, 0.75);
+      overflow: auto;
+     }
 
 .typestyle {
   font-size: 36pt;
@@ -138,6 +144,7 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
 
+
 a {
   color: #fff;
   text-decoration: none; }
@@ -161,7 +168,8 @@ main {
         color: #63f237;
         transition: all 0.5s ease-out; }
   main#home {
-    overflow: hidden; }
+    overflow: auto;
+   }
     main#home h1 {
       margin-top: 20vh; }
 
@@ -175,6 +183,10 @@ main {
     margin: auto;
     border-radius: 50%;
     border: #63f237 3px solid; }
+    .bio-image{
+      width: 225px;
+      height: 250px;
+    }
   .about-info .bio {
     grid-area: bio;
     font-size: 11pt; }
@@ -206,10 +218,11 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 1rem; 
+ }
   .boxes div {
     font-size: 2rem;
-    border: 3px #fff solid;
+    border: 3px peru solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
@@ -329,10 +342,10 @@ main {
   border-radius: 10%; }
 
 .bootstrap {
-  height: 82px;
-  width: 82px;
+  height: 87px;
+  width: 87px;
   font-size: 4em;
-  margin: 1rem; }
+  margin: 0.7rem; }
 
 .cadsoft {
   height: 85px;
@@ -535,7 +548,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
   .menu-branding .portrait {
-    background: url("../img/logo.png");
+    background: url("../img/dev4.png");
     width: 189px;
     height: 244px; }
   .projects {
@@ -545,15 +558,44 @@ main {
     width: 100%;
     height: 450px; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 568px) {
   main#home h1 {
-    margin-top: 10vh; }
+    margin-top: 10vh; 
+  
+  }
   .projects {
     grid-template-columns: 1fr; }
   .iframe {
     margin: 0 0 0 0 !important;
     width: 450px;
-    height: 450px; } }
+    height: 450px; }
+
+    body#bg-img {
+     background: url(../img/phone.jpg) !important;
+     background-repeat: no-repeat !important;
+     width: auto !important;
+     height: 100% !important; 
+     background-size: cover;
+     overflow: auto;
+     height: 100vh;
+    }
+    body#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom:0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(247, 243, 243, 0.55);
+      overflow: auto;
+     }
+    .simon{
+      color: black !important;
+    }
+  
+  }
 
 .btngit {
   background-color: #db1aaa;
@@ -590,11 +632,21 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+    #bg-img {
+      max-width: 100%;
+      height: 100vh;
+      }
+  }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); } 
+    #bg-img {
+      max-width: 100%;
+      height: auto;
+      }
+  }
 
 @media screen and (max-width: 768px) {
   main {
@@ -624,7 +676,12 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'job2' 'job1' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+    #bg-img {
+      max-width: 100%;
+      height: auto;
+      }
+  }
 
 @media screen and (max-width: 500px) {
   main {
@@ -638,4 +695,43 @@ main {
     grid-template-columns: 1fr; }
   .txt-type {
     width: 100%;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+
+    #bg-img {
+      max-width: 100%;
+      height: auto;
+      }
+
+      .icons-display {
+        background: rebeccapurple;
+        padding: 2px;
+        border-radius: 2px;
+      }
+  }
+
+  #bin-demos {
+    float:right;
+    padding: 5px;
+    background: red;
+    border-radius: 5px;
+
+
+  }
+  #bin-demos:hover {
+    text-decoration: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+  }
+ 
+  .welcome {
+    font-size: 40pt ;
+    position: relative;
+    margin: 0 auto;
+    /* text-align: center; */
+  }
+
+#blog-img {
+  height: 87px;
+  width: 87px;
+}
