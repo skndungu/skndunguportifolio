@@ -1,0 +1,113 @@
+[debug] [2018-10-24T08:33:20.724Z] ----------------------------------------------------------------------
+[debug] [2018-10-24T08:33:20.726Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2018-10-24T08:33:20.726Z] CLI Version:   5.1.1
+[debug] [2018-10-24T08:33:20.726Z] Platform:      linux
+[debug] [2018-10-24T08:33:20.726Z] Node Version:  v8.12.0
+[debug] [2018-10-24T08:33:20.726Z] Time:          Wed Oct 24 2018 11:33:20 GMT+0300 (EAT)
+[debug] [2018-10-24T08:33:20.726Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-24T08:33:20.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-24T08:33:20.734Z] > authorizing via signed-in user
+[debug] [2018-10-24T08:33:20.735Z] [iam] checking project skndunguportifolio-739e9 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2018-10-24T08:33:20.736Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/skndunguportifolio-739e9:testIamPermissions  
+
+[debug] [2018-10-24T08:33:23.427Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-24T08:33:23.430Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/skndunguportifolio-739e9  
+ 
+[debug] [2018-10-24T08:33:27.381Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'skndunguportifolio-739e9'...
+[info] 
+[info] i  deploying hosting
+[debug] [2018-10-24T08:33:27.403Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/skndunguportifolio-739e9/versions  
+
+[debug] [2018-10-24T08:33:31.299Z] <<< HTTP RESPONSE 200
+[info] i  hosting[skndunguportifolio-739e9]: beginning deploy...
+[info] i  hosting[skndunguportifolio-739e9]: found 234 files in public
+[debug] [2018-10-24T08:33:31.463Z] [hosting] hash cache [cHVibGlj] stored for 234 files
+[debug] [2018-10-24T08:33:31.463Z] [hosting][hash queue][FINAL]
+[debug] [2018-10-24T08:33:31.464Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/skndunguportifolio-739e9/versions/c83fe0be94348f61:populateFiles  
+ <request body omitted>
+[debug] [2018-10-24T08:33:37.564Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-24T08:33:37.574Z] [hosting][populate queue][FINAL]
+[debug] [2018-10-24T08:33:37.575Z] [hosting] uploads queued: 1
+[debug] [2018-10-24T08:33:40.596Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[skndunguportifolio-739e9]: file upload complete
+[debug] [2018-10-24T08:33:40.600Z] [hosting] deploy completed after 9296ms
+[debug] [2018-10-24T08:33:42.632Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "skndunguportifolio-739e9"
+    },
+    "site": "skndunguportifolio-739e9",
+    "version": "sites/skndunguportifolio-739e9/versions/c83fe0be94348f61"
+  }
+]
+[info] i  hosting[skndunguportifolio-739e9]: finalizing version...
+[debug] [2018-10-24T08:33:42.633Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/skndunguportifolio-739e9/versions/c83fe0be94348f61?updateMask=status  
+
+[debug] [2018-10-24T08:33:45.602Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-24T08:33:45.603Z] [hosting] finalized version for skndunguportifolio-739e9:
+[info] ✔  hosting[skndunguportifolio-739e9]: version finalized
+[info] i  hosting[skndunguportifolio-739e9]: releasing new version...
+[debug] [2018-10-24T08:33:45.607Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/skndunguportifolio-739e9/releases?version_name=sites/skndunguportifolio-739e9/versions/c83fe0be94348f61  
+
+[debug] [2018-10-24T08:33:58.496Z] <<< HTTP RESPONSE 503
+[debug] [2018-10-24T08:33:58.497Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 503, The service is currently unavailable.
+[debug] [2018-10-24T08:34:03.497Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "The service is currently unavailable.",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "body": {
+      "error": {
+        "code": 503,
+        "message": "The service is currently unavailable.",
+        "status": "UNAVAILABLE"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Wed, 24 Oct 2018 08:33:58 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "1; mode=block",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"44,43,39,35\"",
+      "accept-ranges": "none",
+      "connection": "close"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "firebasehosting.googleapis.com",
+        "port": 443,
+        "hostname": "firebasehosting.googleapis.com",
+        "hash": null,
+        "search": "?version_name=sites/skndunguportifolio-739e9/versions/c83fe0be94348f61",
+        "query": "version_name=sites/skndunguportifolio-739e9/versions/c83fe0be94348f61",
+        "pathname": "/v1beta1/sites/skndunguportifolio-739e9/releases",
+        "path": "/v1beta1/sites/skndunguportifolio-739e9/releases?version_name=sites/skndunguportifolio-739e9/versions/c83fe0be94348f61",
+        "href": "https://firebasehosting.googleapis.com/v1beta1/sites/skndunguportifolio-739e9/releases?version_name=sites/skndunguportifolio-739e9/versions/c83fe0be94348f61"
+      },
+      "method": "POST"
+    }
+  }
+}
